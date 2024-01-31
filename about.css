@@ -1,0 +1,873 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: sifonn;
+    src: url(src/sifonn-basic.otf);
+}
+div{
+    font-family: sifonn;
+}
+body{
+    font-family: siffon;
+    scroll-behavior: smooth;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background: url(src/BG.png);
+    overflow: hidden;
+   
+}
+
+.kontainer{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: #4086A2;
+   
+}
+.logo img{
+    max-width: 65px;
+    margin: auto;
+}
+.header .kontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.header .logo img{
+    vertical-align: middle;
+
+}
+.header .menu .head{
+    display: none;
+}
+.header .menu ul li{
+    padding-left: 14px;
+   
+}
+.header .menu ul{
+    list-style: none;
+}
+.header .menu > ul > li{
+    display: inline-block;
+    
+}
+.header .menu li a{
+    
+    padding: 12px 14px;
+    border-radius: 30px;
+    transition: all 0.8s;
+}
+.header .menu > ul > li:not(:last-child){
+        margin-right: 40px;
+}
+.header .menu .menu2{
+    position: relative;
+}
+.header .menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    display: block;
+    font-weight: 600;
+   
+}
+.header.menu>ul>li>a{
+    padding: 24px 0;
+}
+.header .menu > ul .menu2 > a{
+    padding-right: 18px;
+    padding-left: 14px;
+}
+.header .menu i{
+    font-size: 18px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: #fff;
+    top: calc(65% - 16px);
+    font-weight: 600;
+    
+}
+.header .menu .log{
+    display: none;
+}
+.header .menu .home{
+    font-size: 18px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: #fff;
+    top: calc(60% - 16px);
+    left: calc(31%);
+    display: none;
+}
+.header .menu .home2{
+    display: none;
+}
+.header .menu .home3{
+    display: none;
+}
+.header .menu .home4{
+    display: none;
+}
+.header .menu li a:hover{
+transition: all 1s ease;
+background: #a8d3d9;
+background-size: 0 1px;
+border-radius: 30px;
+color: #000; 
+}
+.header .menu > ul >li > i{
+    right: 0;
+    display: block;
+}
+.header .menu .anakmenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 15px 0;
+    box-shadow: 0 0 5px #2c6979;
+    z-index: 1;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header .menu li:hover>.anakmenu{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease;
+    transform: none;
+    border-radius: 30px;
+    background: #4086A2;
+    
+}
+
+.header .menu .anakmenu a{
+    padding: 15px 0px;
+}
+.header .menu .menu2 .anakmenu >a{
+    padding-right: 34px;
+}
+.header .menu .anakmenu span{
+    background-image: linear-gradient(hsl(0,0%,100%),hsl(0,0%,100%));
+    background-size: 0 1PX;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+    
+}
+.header .menu .anakmenu li:hover > a > span{
+    background-size: 100% 1px;
+}
+.headerkanan{
+    display: flex;
+}
+.headerkanan >*{
+    margin-left: 25px;
+}
+.headerkanan .user-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.bx-user{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    text-decoration: none;
+}
+.bx-user:hover{
+    color: red;
+    transition: all 1s ease;
+}
+.headerkanan .btnbukamenu{
+    display: none;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutkontainer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 20px;
+   position: absolute;
+    
+}
+.kontenabout{
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    background:  rgba(64, 134, 162, 0.8);
+    transform: translateY(50px);
+    display: block;
+    border-radius: 20px;
+    opacity: 1;
+ transform: translateX(50%);
+    aspect-ratio: 50/4;
+    z-index: 1;
+}
+.kontenabout h1{
+   
+    font-size: 55px;
+    margin-top: 30px;
+    font-weight: 800;
+    color: #fff;
+    text-shadow:0 0  30px #fff;
+    margin-bottom: 20px;
+}
+.kontenabout p{
+    padding: 20px;
+    line-height: 30.5px;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+  
+    color: #fff;
+
+}
+
+.img{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px; 
+}
+.img img{
+    max-width: 350px;
+    z-index: 2;
+    transform: translateY(70px);
+}
+.pohon{
+    position: absolute;
+    
+    left: 770px;
+    width: 100%;
+    height: 100%;
+   bottom: -35px;
+    z-index: 0;
+    
+}
+.pohon img{
+    width: 85%;
+}
+.bangunan{
+    position: absolute;
+   
+    top: 175px;
+    max-width: 950px;
+    height: 100%;
+    left: -660px;
+}
+.burung2{
+    position: absolute;
+    display: none;
+}
+.kartuSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.kartusSection::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+
+}
+.kartuKontainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1800px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.kartuKontainer .kartu{
+    position: relative;
+    width: 40%;
+    height: fit-content;
+    margin: 30px;
+    box-shadow: 20px 20px 50px  rgba(0, 0, 0, 0.5);
+    background:  rgba(64, 134, 162, 0.4);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(64, 134, 162, 0.5);
+    border-left: 1px solid rgba(64, 134, 162, 0.2);
+    backdrop-filter: blur(2px);
+}
+.kartuKontainer .kartu .konten{
+    padding: 50px;
+    text-align: left;
+    transition: 0.5s;
+
+}
+.kartuKontainer .kartu .konten i{
+    position: absolute;
+    font-size:60px;
+    top:70px;
+    left:0px;
+    padding: 15px;
+    color: #4086A2;
+}
+.kartuKontainer .kartu .konten h2{
+position: absolute;
+top: 10px;
+right: 30px;
+color: #4086A2;
+pointer-events: none;
+}
+.kartuKontainer .kartu .konten h3{
+    color: #4086A2;
+    font-size: 1.4em;
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.kartuKontainer .kartu .konten p{
+    margin-top: 20px;
+    color: #4086A2;
+    font-size: 0.9em;
+    font-weight: 300;
+    margin-left: 50px;
+}
+.kontenTxt{
+    display: flex;
+    justify-content: left;
+    position: absolute;
+}
+.kartuKontainer .kartu2 {
+    width: fit-content;
+    height: fit-content;
+}
+.cta{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 12px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   background: url(src/BG.png);
+    overflow: hidden;
+   
+}
+.kontenCta{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:   18px 18px ;
+}
+.kontenCta .textBox{
+    position: relative;
+    max-width: 600px;
+    transform: translateX(100px);
+    z-index: 1;
+
+}
+
+
+.kontenCta .textBox p {
+    color: #2c6979;
+    font-weight: 400;
+    font-family: sifonn;
+    padding: 12px 10px;
+    font-size: 24px;
+    aspect-ratio: 45/5;
+}
+.kontenCta .textBox a{
+    background: #4086A2;
+    border-radius: 40px;
+    padding:8px 20px;
+    display: inline-block;
+    margin-top: 24px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: sifonn;
+   
+}
+.kontenCta .textBox a:hover{
+    color: #000;
+    background: #a8d3d9;
+    transition: all 0.5s;
+    padding:10px 20px;
+    letter-spacing: 4px;
+    font-family: sifonn;
+   
+}
+.kontenCta .imgBox2 {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px; 
+}
+.imgBox2 img {
+    width: 350px;
+    z-index: 2;
+    transform: translateY(70px);
+}
+.pohon2{
+    position: absolute;
+    left: 770px;
+    width: 100%;
+    height: 100%;
+   bottom: 25px;
+    z-index: 0;
+}
+.pohon2 img{
+    width: 85%;
+}
+.bangunan2{
+    position: absolute;
+   
+    top: 105px;
+    max-width: 950px;
+    height: 100%;
+    left: -660px;
+}
+.burung12{
+    position: absolute;
+    left: 0;
+    top: -20;
+    transform: translateX(-32px);
+}
+.burung22{
+    position: absolute;
+}
+@media screen and (max-width:1300px){
+    header{
+     padding: auto;
+    }
+ 
+     header .logo{
+         width: 100px;
+         align-items: left;
+     }
+    
+     .header .menu li a{
+         font-size: 20px;
+     }
+     .header .bx-user {
+         font-size: 40px;
+     }
+     .logo img{
+         max-width: 90px;
+     }
+     .aboutkontainer{
+        padding: 12px 12px;
+            margin: auto;
+     }
+     .kontenabout{
+      margin-top: 100px;
+        text-align: center;
+           height: fit-content;
+           transform: translateX(50%);
+     }
+     .kontenabout h2{
+        font-size: 12px;
+     }
+     .kontenabout p{
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        padding: 10px 5px;
+     }
+}
+@media screen and (max-width:990px){
+    header{
+        height: 8vh;
+
+    }
+    .kontainer{
+        margin: -15px 10px;
+    }
+
+    .header .menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #4086A2;
+        padding: 15px 20px 20px;
+        overflow-y: auto;  
+        transform: translateX(100%);
+        font-size: 25px;
+        z-index: 1000;
+       
+    }
+    .header .menu li{
+        width: 100%;
+    }
+    .header .menu li a{
+        font-size: 20px;
+    }
+    .header .menu .menu2.active > i{
+        background-color: #e1f3f7;
+        transform: rotate(180deg);
+    }
+    .header .menu .log {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+       
+        transform: translateY(50%);
+    }
+     .log {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right,#32be8f,#38d39f,#32be8f);
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+        background-size: 200%;
+        transition: .5s;
+        text-transform: uppercase;
+      
+        
+        
+        
+    }
+    .log:hover{
+        background: #fff;
+        color: #000;
+    }
+    .header .menu.open{
+        transform: none;
+    }
+    .headerkanan .btnbukamenu{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 34px;
+        cursor: pointer;
+        position: relative;
+        background-color: transparent;
+        border: none;
+    }
+    .headerkanan .btnbukamenu .line{
+        height: 4px;
+        width: 35px;
+        background-color: #fff;
+        position: absolute;
+    }
+    .headerkanan .btnbukamenu .line-1{
+        transform: translateY(-8px);
+    }
+    .headerkanan .btnbukamenu .line-3{
+        transform: translateY(8px);
+    }
+    .header .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .header .menu .home{
+        display: inline-flex;
+        left: 0;
+    }
+    .header .menu .home2{
+        display: inline-flex;
+        left: 0;
+    }
+    .header .menu .home3{
+        display: inline-flex;
+        left: 0;
+    }
+    .header .menu .home4{
+        display: inline-flex;
+        left: 0;
+    }
+    .header .menu .btnpenutupmenu{
+        height: 50px;
+        width: 50px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        cursor: pointer;
+      
+    }
+    .header .menu .btnpenutupmenu::before,
+    .header .menu .btnpenutupmenu::after{
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: #fff;
+        border: none;
+    }
+    .header .menu .btnpenutupmenu::before{
+        transform: rotate(45deg);
+    }
+    .header .menu .btnpenutupmenu::after{
+        transform: rotate(-45deg);
+    }
+    .header .menu>ul>li{
+        display: block;
+    }
+    .header .menu li:hover>.anakmenu{
+        background: #4086A2;   
+         width: 100%;
+    }
+    .header.menu>ul>li:not(.last-child){
+        margin-right: 0;
+    }
+   
+    .header .menu>ul>li>a{
+        padding: 12px 12px;
+    }
+    .header .menu li a:hover{
+        background: #2c6979;
+        color: aquamarine;
+    }
+    .header .menu>ul>.menu2>a{
+        padding-right: 34px;
+    }
+    .header.menu i{
+        height: 34px;
+        width: 34px;
+        border: 1px solid #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+        top: 7px;
+        
+    }
+    header .logo{
+        width: 60px;
+       
+    }
+ .logo img{
+    max-width: 60px;
+ }
+
+    .header .bx-user{
+        font-size: 30px;
+    }
+    .aboutkontainer{
+        flex-direction: column;
+        margin-top: 5px;
+        width: 100%;
+    }
+    .kontenabout{
+        margin-top: 80px;
+        width: 100%;
+        height: fit-content;
+        padding: 0px;
+        transform: translateX(0px);
+        top: 100px;
+    }
+    .kontenabout h1{
+        font-size: 35px;
+    }
+    .kontenabout p{
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.4px;
+    }
+    .img{
+        top: -60%;
+        left: 70%;
+        right: 0;
+        position: absolute;
+      z-index:0;
+      max-width: 100%;
+      text-align: center;
+      display: flex;
+      transform: translateY(0px);
+      display: none;
+    }
+    .img img{
+        max-width: 1000px;
+    }
+    .bangunan{
+       
+        transform: translateY(180px);
+        display: none;
+    }
+   
+    .pohon{
+        top: 325px;
+        transform: translateX(-860px);
+        right: 0;
+       
+    }
+    .pohon img{
+        width: 1100px;
+    }
+    .burung2{
+        position: absolute;
+        display: block;
+        transform: translateX(-380px);
+    }
+    .kartuKontainer{
+        flex-direction: column;
+       position:relative;
+       width: 1200px;
+       flex-wrap: wrap;
+      
+        
+    }
+    .cta{
+    padding: 90px 20px;
+    }
+    .kontenCta{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .textBox{
+        left: -100px;
+        top: -240px;
+        text-align: center;
+    }
+    .kontenCta .imgBox2{
+      
+        position: absolute;
+      z-index:0;
+   
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      top: -80;
+      
+      
+    }
+   .imgBox2 img{
+    width: 800px;
+   }
+    .kartuKontainer .kartu{
+        width: 90%;
+    }
+    .kartuKontainer .kartu .konten {
+        text-align: none;
+    }
+    .bangunan2{
+        display: none;
+    }
+    .pohon2{
+       top: 150px;
+       left: 0;
+       right: 0;
+       display: inline-flex;
+       position: absolute;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    .pohon2 img{
+        width: 550px;
+        display: none;
+    }
+    .burung12{
+        left: 0;
+        top: -180px;
+    }
+    .burung22{
+        display: none;
+    }
+}
+@media screen and (max-width:480px){
+    header{
+        height: 8vh;
+    }
+    .header{
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+    .header .menu .btnpenutupmenu{
+        width: 40px;
+        height: 40px;
+        border: none;
+    }
+    .kartuKontainer{
+        width: 100%;
+       right: 10px;
+    }
+    .kartuKontainer .kartu .konten i{
+        top: 90px;
+        font-size: 50px;
+    }
+    .kartuKontainer .kartu .konten h3{
+        font-size:1em;
+    }
+    .kartuKontainer .kartu .konten p{
+        font-size: 0.8em;
+    }
+   .imgBox2 img{
+    width: 600px;
+   }
+}
+@media screen and (max-width:399px){
+    header{
+        height: 9vh;
+    }
+    .header .menu .btnpenutupmenu{
+        width: 30px;
+        height: 30px;
+        border: none;
+    }
+    .img{
+        top: -240px;
+        left: 70%;
+    }
+    .img img{
+        width: 900px;
+    }
+    .kontenCta .textBox{
+        top: -150px;
+    }
+    .kontenCta .textBox p{
+        font-size: 16px;
+    }
+}
